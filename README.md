@@ -1,19 +1,13 @@
-# 🎈 Blank app template
+# Movie Recommendation System
 
-A simple Streamlit app template for you to modify!
+This program is going to serve as a streamlit web app where users can input a movie they liked and receive recommendations! 
 
 [![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://blank-app-template.streamlit.app/)
 
-### How to run it on your own machine
+### From where is this movie recommendation system?
 
-1. Install the requirements
+* This program is adapted from [Spencer Pao](https://youtu.be/G4MBc40rQ2k?si=FPx8PP1d05gzC-IU) well developed recommendation system! 
+* What makes this recommendation system different is that it includes modifications and additional feautres to allow users to input a movie title they like and the system would output recommendation back to the users.
 
-   ```
-   $ pip install -r requirements.txt
-   ```
-
-2. Run the app
-
-   ```
-   $ streamlit run streamlit_app.py
-   ```
+### What makes up this system?
+These recommendation system is composed of collaborative filtering, matrix factorization, and machine learning.  
