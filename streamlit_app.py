@@ -12,7 +12,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.cluster import KMeans
 
 # import the necessary classes
-from matrix_factoriztion import MatrixFactorization
+from matrix_factorization import MatrixFactorization
 from loader import Loader
 
 def save_complete_model(model, file_name):
@@ -23,7 +23,7 @@ def save_complete_model(model, file_name):
 def load_complete_model(file_name):
   """Load the complete pre-trained model"""
   model = MatrixFactorization(n_users, n_items, n_factors=8)
-  model = torch.load(file_name, weights_only=False)
+  model = torch.load(file_name, weights_only=False, map_location=torch.device('cpu')) # change the execution to be done on the cpu
   model.eval()
   return model
 
@@ -150,8 +150,6 @@ train_loader = DataLoader(train_set, batch_size=batch_size, shuffle=True)
 
 # Store the movies embedding 
 trained_movie_embeddings = model.item_factors.weight.data.cpu().numpy()
-
-
 
 # Initiate the KMeans model and fit the movie embedding
 kmeans = KMeans(n_clusters=308, random_state=42)

@@ -1,5 +1,7 @@
 # Originally by Spencer Pao*
-class Loader(Dataset):
+import torch
+
+class Loader():
   def __init__(self, Dataset):
     """Extract the users and movies ID to create mapping between them for matrix
     factorization. Additioanlly, extract the userId and ratings features so they

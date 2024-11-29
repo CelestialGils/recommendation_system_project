@@ -1,3 +1,5 @@
+import torch
+
 # Class where the Matrix Factorization is going to take place
 # code retrieved from Spencer Pao's program and using Gemini's autocomplete
 class MatrixFactorization(torch.nn.Module):
